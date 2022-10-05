@@ -1,0 +1,29 @@
+<ion-content>
+  
+  <h1>Sera que vocês tem quimica?</h1>
+  <div class="fundo"></div>
+  <div class="quadro">
+    <ion-item class="ion-no-padding">
+
+      <ion-label position="floating">Primeiro nome</ion-label>
+      <ion-input [(ngModel)]="nome1" type="textion-input" name="nome"></ion-input>
+    </ion-item>
+    <div class="icone">
+      <ion-icon name="add"></ion-icon>
+    </div>
+    <ion-item class="ion-no-padding">
+      <ion-label position="floating">Segundo nome</ion-label>
+      <ion-input [(ngModel)]="nome2" type="textion-input" name="nome"></ion-input>
+    </ion-item>
+  </div>
+
+  <div class="cor"></div>
+  <ion-button (click)="calcular()" id="open-resposta" expand="ful">Calcular</ion-button>
+
+  <ion-modal id="resposta" #modal trigger="open-resposta">
+    <ng-template>
+      <h2>{{resposta}}</h2>
+    </ng-template>
+  </ion-modal>
+
+</ion-content>
